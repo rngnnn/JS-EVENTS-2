@@ -35,10 +35,37 @@ let sonuc = document.getElementById("result")
 //? 4. yol dışarıdan fonksiyon çağırmak
 
 
-function clicked () {
+// function clicked () {
 
-    sonuc.textContent += " Button 1 clicked function called from outside"
-}
+//     sonuc.textContent += " Button 1 clicked function called from outside"
+// }
 
-buton1.addEventListener("click",clicked)
+// buton1.addEventListener("click",clicked)
+
+//? mouseover ouseout eventleri
+
+let myImg=document.getElementById("myImage")
+
+myImg.addEventListener("mouseover",()=>{
+
+myImg.style.width="300px"
+console.log("imaj 300px oldu");
+
+})
+
+myImg.addEventListener("mouseout",()=>{
+
+    myImg.style.width="100px"
+    console.log("imaj 100px oldu");
+    
+})
+
+buton1.addEventListener("click",()=>{
+myImg.style.display="block";
+
+
+
+
+})
+
 
