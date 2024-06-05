@@ -44,28 +44,54 @@ let sonuc = document.getElementById("result")
 
 //? mouseover ouseout eventleri
 
-let myImg=document.getElementById("myImage")
+// let myImg=document.getElementById("myImage")
 
-myImg.addEventListener("mouseover",()=>{
+// myImg.addEventListener("mouseover",()=>{
 
-myImg.style.width="300px"
-console.log("imaj 300px oldu");
+// myImg.style.width="300px"
+// console.log("imaj 300px oldu");
 
-})
+// })
 
-myImg.addEventListener("mouseout",()=>{
+// myImg.addEventListener("mouseout",()=>{
 
-    myImg.style.width="100px"
-    console.log("imaj 100px oldu");
+//     myImg.style.width="100px"
+//     console.log("imaj 100px oldu");
     
+// })
+
+// buton1.addEventListener("click",()=>{
+// myImg.style.display="block";
+
+// })
+
+
+let secim=document.getElementById("colors")
+secim.addEventListener("change",()=>{
+
+let selectedColor=secim.value
+document.getElementById("selectedColor").textContent=`secilen Renk: ${selectedColor}`
+document.body.style.backgroundColor=selectedColor
 })
 
-buton1.addEventListener("click",()=>{
-myImg.style.display="block";
+//?Random background color
 
+
+//random renk
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+
+}
+
+const buton2=document.getElementById("colorButton")
+buton2.addEventListener("click",()=>{
+const renk=getRandomColor()
+// console.log(renk);
+document.body.style.backgroundColor=renk
 
 
 
 })
-
-
