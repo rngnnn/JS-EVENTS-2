@@ -7,15 +7,38 @@ let sonuc = document.getElementById("result")
 
 //! Callback yazım çeşitleri
 
-buton1.addEventListener("click",function konsol(){
-    console.log("buton1 clicked")
-})
+//? 1. yol
+
+// buton1.addEventListener("click",function konsol(){
+//     console.log("buton1 clicked")
+// })
 
 
-//?2. yol(fonksiyon ismi opsiyonel)
+//? 2. yol (Fonksiyon ismi opsiyonel)
+// buton1.addEventListener("click",function (){
+//     console.log("buton1 clicked")
+//     sonuc.textContent = "Button 1 clicked "
+// })
 
-buton1.addEventListener("click",function konsol(){
-    console.log("buton1 clicked")
-})
+// buton1.addEventListener("dblclick",function (){
+    
+//     sonuc.textContent = "Button 1 double clicked "
+//     console.log("buton1 double clicked")
+// })
 
+//? 3. yol dışardan arrow / named fonksiyon çağırma
+
+// const clicked2 = () => {sonuc.textContent = "Button 1 clicked "}
+
+// buton1.addEventListener("click",clicked2) //çağırma parantezleri olmadan yazılacak
+
+//? 4. yol dışarıdan fonksiyon çağırmak
+
+
+function clicked () {
+
+    sonuc.textContent += " Button 1 clicked function called from outside"
+}
+
+buton1.addEventListener("click",clicked)
 
